@@ -9,8 +9,50 @@
 
 <body>
     <script>
-        // Your JavaScript goes here!
-        console.log("Hello, World!")
+        // Create a function that plays a round of Rock, Paper, Scissors 
+        // The function should take player and computer selection
+        // return string declaring winner of the round
+        // make player selction parameter case-insensitive 
+        
+    const arr = ["rock", "paper", "scissors"]
+
+    
+    function  getComputerChoice(arr) {
+            const randomIndex = Math.floor(Math.random() * arr.length);
+            const item = arr[randomIndex];
+            return item;
+        }
+    
+    const playerSelection = prompt("Enter Rock, Paper, or Scissors").toLowerCase();
+         console.log(playerSelection)
+    const computerSelection = getComputerChoice(arr);
+         console.log(computerSelection)
+
+
+    function playRound(playerSelection, computerSelection) {
+
+            if (playerSelection === "rock" && computerSelection === "scissors") {
+                return ("You win! Rock beats scissors")
+            } else if (playerSelection === "rock" && computerSelection === "paper") {
+                alert("You lose. Paper beats rock")
+            } else if (playerSelection === "paper" && computerSelection === "scissors") {
+                alert("You lose. Scissors beat paper.")
+            } else if (playerSelection === "paper" && computerSelection === "rock") {
+                alert("You win! Paper beats rock.")
+            } else if (playerSelection === "scissors" && computerSelection === "rock") {
+                alert("You lose. Rock beats scissors")
+            } else if (playerSelection === "scissors" && computerSelection === "paper") {
+                alert("You win! Scissors beat paper.")
+            } else if (playerSelection === computerSelection) {
+                alert(`Looks like we have a tie. You both chose ${playerSelection}`)
+            } else {
+                alert("Something went wrong.")
+            }
+        }
+    alert (playRound(playerSelection, computerSelection))
+    
+ 
+
     </script>
 </body>
 
