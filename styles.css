@@ -1,0 +1,14 @@
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+
+}
+
+.score {
+    font-weight: bold;
+}
